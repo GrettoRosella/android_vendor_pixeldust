@@ -23,7 +23,7 @@ endif
 PRODUCT_BUILD_PROP_OVERRIDES := TARGET_BUILD_TYPE=user
 BUILD_TIMESTAMP := $(shell date -u +%s)
 
-# Pixel Dust ROM package name 
+# Pixel Dust ROM package name
 PIXELDUST_VERSION := $(PD_ROM_MAJ_VERSION)-$(BUILD_VERSION_CODE)-$(TARGET_DEVICE)-$(shell date +%Y%m%d-%H%M)
 
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -32,4 +32,3 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.pixeldust.ota.version=$(ANDROID_OS_VERSION) \
     ro.pixeldust.ota.version_code=$(BUILD_VERSION_CODE) \
     ro.pixeldust.ota.timestamp=$(BUILD_TIMESTAMP)
-

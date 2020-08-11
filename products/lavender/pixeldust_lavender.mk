@@ -19,9 +19,15 @@ $(call inherit-product, vendor/pixeldust/configs/phone-xhdpi-4096-dalvik-heap.mk
 $(call inherit-product, vendor/pixeldust/configs/pixeldust_phone.mk)
 $(call inherit-product, packages/apps/XiaomiParts/xiaomiparts.mk)
 
+# Google Apps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+REMOVE_GAPPS_PACKAGES += \
+    GoogleCamera
+
 # Release name
 PRODUCT_RELEASE_NAME := Xiaomi Redmi Note 7
 export TARGET_DEVICE := Lavender
+SIGN_KEY := RELEASE
 
 # Another Stuff for Lavender
 TARGET_EXCLUDE_QCOM_VENDOR_SEPOLICY := true
